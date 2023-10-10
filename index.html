@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl"> 
+<head>
+<meta http-equiv="refresh" content="600">
+<style>
+  .tabcontent { display: none; }
+  .tabcontent.active { display: block; }
+  .tablinks.active { cursor: allowed; }
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div><iframe src="https://libanradio.github.io/flexcarousel/" style="left: 0; right: 0; bottom: 0px; width: 102%; height: 140px; border: none; margin-top:0px;" allowtransparency="no" scrolling="no"></iframe></div>
+
+<body>
+
+<div dir="rtl">
+<div class="tab">
+  <button class="tablinks active" onclick="openNews(event, 'البث المباشر')">البث المباشر</button>
+  <button class="tablinks" onclick="openNews(event, 'ثقافة')">ثقافة</button>
+  <button class="tablinks" onclick="openNews(event, 'صحة')">صحة</button>
+  <button class="tablinks" onclick="openNews(event, 'إقتصاد')">إقتصاد</button>
+  <button class="tablinks" onclick="openNews(event, 'إجتماعي')">إجتماعي </button>
+  <button class="tablinks" onclick="openNews(event, 'رياضة')">رياضة</button>
+
+</div>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 0px solid #ccc;
+  background-color: #00000000;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 22px;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #00000000;
+  color: #222222;
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #00000000;
+  text-decoration: underline #eb2026;
+  }
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 0px solid #ccc;
+  border-top: none;
+}
+ 
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 16px;
+}
+
+a:hover {
+  background-color: #0000000;
+  color: red;
+}
+
+.previous {
+  background-color: #0000000;
+  color: black;
+}
+
+.round {
+  border-radius: 20%;
+  }
+</style>
+
+<tbody>
+<tr>
+  <a id='back' href='javascript:void();' onclick="self.history.back(-1)"  class="previous round">&#8249;</a>
+</tr>
+</tbody>
+
+</table>
+<div style="overflow-x: auto; overflow-y: auto;">
+<tbody>
+<div id="البث المباشر" class="tabcontent active">    
+ <div class = "tab-1-content"> <iframe scrolling="auto"  src="http://sites.google.com/view/radioliban/البرامج/البث-المباشر" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%; "> </iframe></div>
+</div>
+<div id="ثقافة" class="tabcontent">
+  <div class = "tab-3-content"> <iframe scrolling="auto" src="https://sites.google.com/view/radioliban/البرامج/ثقافة" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%;"> </iframe></div>
+</div> 
+<div id="صحة" class="tabcontent">
+  <div class = "tab-4-content"> <iframe scrolling="auto" src="https://sites.google.com/view/radioliban/البرامج/صحة" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%; "> </iframe></div>
+</div> 
+<div id="إقتصاد" class="tabcontent">
+<div class = "tab-5-content"> <iframe scrolling="auto" src="https://sites.google.com/view/radioliban/البرامج/إقتصاد" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%;"> </iframe></div>
+</div> 
+<div id="إجتماعي" class="tabcontent">
+<div class = "tab-6-content"> <iframe scrolling="auto" src="https://sites.google.com/view/radioliban/البرامج/إجتماعي" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%;"> </iframe></div>
+</div>
+<div id="رياضة" class="tabcontent">
+<div class = "tab-7-content"> <iframe scrolling="auto" src="https://sites.google.com/view/radioliban/البرامج/رياضة" style="border: 0px none; margin-left: -5px; height: 2000px; margin-top: -140px; width: 100%;"> </iframe></div>
+</div>
+<script>
+
+function openNews(evt, NewsName) {
+
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  evt.currentTarget.classList.add("active");
+  document.getElementById(NewsName).classList.add("active");
+} 
+</script>
+   
+</body>
+</html>
